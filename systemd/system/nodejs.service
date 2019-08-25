@@ -1,0 +1,16 @@
+[Unit]
+Description = isucon8 qualifier main application in nodejs
+
+[Service]
+WorkingDirectory=/home/ubuntu/isucon8-qualify/webapp/nodejs
+EnvironmentFile=/home/ubuntu/isucon8-qualify/webapp/env.sh
+
+ExecStart = /bin/bash /home/ubuntu/isucon8-qualify/webapp/nodejs/run_local.sh
+
+Restart   = always
+Type      = simple
+User      = ubuntu
+Group     = ubuntu
+
+[Install]
+WantedBy = multi-user.target
