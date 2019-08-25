@@ -6,6 +6,8 @@ WorkingDirectory=/home/ubuntu/isucon8-qualify/webapp/nodejs
 EnvironmentFile=/home/ubuntu/isucon8-qualify/webapp/env.sh
 
 ExecStart = /bin/bash /home/ubuntu/isucon8-qualify/webapp/nodejs/run_local.sh
+StandardOutput=file:/var/log/nodejs.log
+StandardError=file:/var/log/nodejs.log
 
 Restart   = always
 Type      = simple
